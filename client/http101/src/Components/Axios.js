@@ -21,7 +21,7 @@ function Axios() {
   }
 
   function deleteRequest() {
-    axios.delete('http://localhost:8080/yarn/delete/3')
+    axios.delete('http://localhost:8080/yarn/delete/1')
     .then(response => console.log(response.data))
     .catch(error => console.log(error))
   }

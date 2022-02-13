@@ -84,7 +84,7 @@ app.delete('/yarn/delete/:id', (req, res) => {
     }
   }
 
-  if (index) {
+  if (index === 0 || index) {
     yarnDB.splice(index, 1)
     console.log(yarnDB)
     res.send(`Yarn id ${req.params.id} deleted!`)
