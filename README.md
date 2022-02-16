@@ -1,6 +1,6 @@
 # HTTP101
 
-This is the example code for [A Beginner's Guide to HTTP - Part 2: an App and a Server](), explaining how to generate HTTP messages with JavaScript.
+This is the example code for [A Beginner's Guide to HTTP - Part 2: an App and a Server](https://dev.to/abbeyperini/a-beginners-guide-to-http-part-2-an-app-and-a-server-211p), explaining how to generate HTTP messages with JavaScript.
 
 ## License
 
