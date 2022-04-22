@@ -4,6 +4,8 @@ import './index.css';
 import XHR from './Components/XHR';
 import Fetch from './Components/Fetch';
 import Axios from './Components/Axios';
+import Ghibli from './Components/Ghibli';
+import Objects from './Components/Objects';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -11,6 +13,8 @@ ReactDOM.render(
     <XHR />
     <Fetch />
     <Axios />
+    <Ghibli />
+    <Objects />
   </React.StrictMode>,
   document.getElementById('root')
 );
