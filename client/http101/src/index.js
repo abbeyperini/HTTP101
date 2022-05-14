@@ -6,6 +6,7 @@ import Fetch from './Components/Fetch';
 import Axios from './Components/Axios';
 import Ghibli from './Components/Ghibli';
 import Objects from './Components/Objects';
+import NYTMovies from './Components/NYTMovies';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -15,6 +16,7 @@ ReactDOM.render(
     <Axios />
     <Ghibli />
     <Objects />
+    <NYTMovies />
   </React.StrictMode>,
   document.getElementById('root')
 );

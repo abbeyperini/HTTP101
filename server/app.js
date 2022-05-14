@@ -104,6 +104,32 @@ app.post('/yarn/create', (req, res) => {
   }
 })
 
+const { default: axios } = require('axios');
+global.Buffer = global.Buffer || require('buffer').Buffer;
+
+function setAuthenticationHeader() {
+    let data = `${USERNAME}:${PASSWORD}`;
+    let buff = new Buffer.from(data);
+    let base64data = buff.toString('base64');
+    axios.defaults.headers.common['Authorization'] = 'Basic ' + base64data;      
+}
+
+app.use(cors());
+app.get('/projects/:user', (req, res) => {
+    setAuthenticationHeader();
+    let user = req.params.user;
+    let url = `https://api.ravelry.com/projects/${user}/list.json`;
+    axios.get(url).then((response) => res.send(response.data))
+    .catch((error) => res.send(error.response.data))
+})
+
+function setAuthenticationHeader() {
+  let token = `YOUR_TOKEN`;
+  let buff = new Buffer.from(token);
+  let base64data = buff.toString('base64');
+  axios.defaults.headers.common['Authorization'] = 'Bearer ' + base64data;      
+}
+
 app.listen(port, () => {
   console.log("Server is running on port 8080...")
 })
